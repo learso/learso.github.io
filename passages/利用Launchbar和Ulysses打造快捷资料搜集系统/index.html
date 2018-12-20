@@ -8,12 +8,12 @@
   
   
   
-  <title>Hello World | Peizhi&#39;s Blog</title>
+  <title>利用Launchbar和Ulysses打造快捷资料搜集系统 | Peizhi&#39;s Blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="Hexo, theme-bmw">
+    <meta name="keywords" content="工具使用,Launchbar,Ulysses,知识管理,">
   
 
   <script>
@@ -165,7 +165,7 @@
 
 <div class="post">
   <h1 class="article-title">
-    <span>Hello World</span>
+    <span>利用Launchbar和Ulysses打造快捷资料搜集系统</span>
   </h1>
   <div class="article-top-meta">
     <span>
@@ -173,9 +173,16 @@
       2018-12-20
     </span>
     
+      <span>
+        分类 : 
+          <a href="/categories/工具使用/">
+            工具使用
+          </a>
+      </span>
+    
     
       <span>
-        浏览 : <span class="article-timer" data-identity="hello-world"></span>
+        浏览 : <span class="article-timer" data-identity="利用Launchbar和Ulysses打造快捷资料搜集系统"></span>
       </span>
     
   </div>
@@ -184,16 +191,40 @@
 
   <div class="article-content">
     <div class="markdown-body">
-      <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+      <p>记得应该是在<a href="http://www.sspai.com" target="_blank" rel="noopener">少数派</a>上看到过一篇介绍如何以drafts为中心，打造ios系统的工作流程。瞬间就觉得这个工作流程正是我一直在寻找但又苦苦不能得的。后来按照这篇文章的思路，又结合自己的特殊需求修改，就形成了ios系统上以drafts为几乎所有的输入入口的一个流程。</p>
+<ul>
+<li>任务、待办等都通过drafts转2Do</li>
+<li>每日二句心灵鸡汤，通过drafts搜集资料，筛选后发微信群，再转印象笔记存档</li>
+<li>灵感、读书感悟直接写在drafts中，然后存档，以后需要深入思考时再转印象笔记或Ulysses</li>
+<li>日记在drafts中写草稿，修改，然后转存DayOne</li>
+</ul>
+<p>至少到现在为止非常满意这套输入流程。但是每天工作的大部分时间用的生产工具是Mac OS，所以就想在Mac OS上有没有类似drafts的软件，可以让我完成同样的流程呢？</p>
+<p>由于mac的操作性比用手机要方便得多，各种软件都带有全局的快捷键，所以理论上不需要像ios上这样的一个软件转发的功能。仔细分析了自己的需求，发现资料的搜集和整理花去了我大部分的时间，而且很多操作不断重复：</p>
+<ol>
+<li>选取重要的段落、文字</li>
+<li>复制（Commander+c）</li>
+<li>切换到印象笔记（或者Ulysses）</li>
+<li>找到搜集资料统一入口文章</li>
+<li>粘贴（Commander+v）</li>
+</ol>
+<p>作者Bigice 在<a href="https://sspai.com/post/43323" target="_blank" rel="noopener">《用 Drafts + LaunchBar + Evernote 打造 Daily Record 系统 》</a>这篇文章提供了很好的解决方案，就是LaunchBar+印象笔记的方案。但是两个原因让我没有完成应用文章中提供的脚本和方法，而是把资料搜集的入口放到了Ulyssess中：</p>
+<ol>
+<li>在我的体系中，印象笔记是一个数据仓库，几乎不会在印象笔记中进行资料的加工。而从各渠道搜集过来的资料可能还需要进行筛选，剪枝，所以直接入到印象笔记不太合适。</li>
+<li>直接复制文章中的AppleScript似乎有语法问题，不能直接使用。</li>
+</ol>
+<p>因此，最终我使用了LauncherBar+Ulysses的组合，其他逻辑和原理和Bigice文章中一致。</p>
+<ol>
+<li>Launchbar中新建action， 使用什么名字随便，关键是default.py文件的脚本怎么写。我对Python相对更熟悉一点，所以就选用Python作为脚本语言。另外，现在Python3就已成熟，所以脚本头指定了<code>#!/usr/local/bin/python3</code>。与Ulysses的交互也利益于丰富的URL Scheme，可以点<a href="http://www.sohu.com/a/234645690_115785" target="_blank" rel="noopener">这里</a>看详细规则。</li>
+</ol>
+<p>default.py的源码如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/local/bin/python3</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 把选Instant Send的内容发住Ulysses，并自动隐藏Ulysses</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> subprocess <span class="keyword">as</span> sp</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">my_env = os.environ.copy()</span><br><span class="line">my_env[<span class="string">"PATH"</span>] = <span class="string">"/usr/local/bin:"</span> + my_env[<span class="string">"PATH"</span>]</span><br><span class="line"></span><br><span class="line">now = int(time.time()) </span><br><span class="line">timeStruct = time.localtime(now) </span><br><span class="line">strTime = time.strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>, timeStruct) </span><br><span class="line"></span><br><span class="line">text = <span class="string">"- "</span>+sys.argv[<span class="number">1</span>]+<span class="string">"   &lt;*"</span>+strTime+<span class="string">"*&gt;"</span></span><br><span class="line">text = text.replace(<span class="string">'ulysses://'</span>,<span class="string">'ulysses%3A%2F%2F'</span>)</span><br><span class="line">url_scheme = <span class="string">"ulysses://x-callback-url/insert?id=[[ariticle_id]]&amp;newline=prepend&amp;text="</span>+text</span><br><span class="line"></span><br><span class="line">my_command = [<span class="string">"open"</span>, url_scheme]</span><br><span class="line">content = sp.check_output(my_command, env=my_env)</span><br><span class="line"></span><br><span class="line">apple_script_name = <span class="string">"hide.scpt"</span></span><br><span class="line">my_command = [<span class="string">"osascript"</span>, apple_script_name]</span><br><span class="line">content = sp.check_output(my_command, env=my_env)</span><br></pre></td></tr></table></figure></p>
+<ol start="2">
+<li>脚本用得比较顺手，但使用过程中有一点比较不爽的是每次LaunchBar胡Instant Send把内容粘贴进Ulysses后，就会停留在Ulysses的界面，还得自己手动切换回到之前浏览的界面，并且于是想了好多办法都没法解决这个问题。比如一开始想通过URL Scheme的x-success参数回到原应用，但是没有办法知道之前使用的到底是什么应用。最终的解决办法还是AppleS。在调用完Ulysess的Url Scheme后再调用一段AppleScript，这段脚本的作用是按快捷键Commant+H（隐藏当前窗口）。</li>
+</ol>
+<p>想要使用这种方法，必须在Action中再新建一个脚本，我叫他hide.scpt，脚本的代码如下：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--自动隐藏当前窗口（Command+H）</span></span><br><span class="line"><span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">"System Events"</span></span><br><span class="line">	key code <span class="number">4</span> using &#123;command down&#125;</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">tell</span></span><br></pre></td></tr></table></figure></p>
+<p>在default.py中增加调用的hide.scpt的代码就可以了：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apple_script_name = <span class="string">"hide.scpt"</span></span><br><span class="line">my_command = [<span class="string">"osascript"</span>, apple_script_name]</span><br><span class="line">content = sp.check_output(my_command, env=my_env)</span><br></pre></td></tr></table></figure></p>
+<p>利息AppleScript可以调用键盘的功能，其实可以做很多事，至于如何搭配就看每个人的想象了。</p>
+<p>最后附上Mac键盘对应的key code的表供参考：</p>
+<p><img src="%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-12-11%20%E4%B8%8B%E5%8D%882.37.45.png" alt="Mac 系统键盘key code对应关系"></p>
     </div>
   </div>
   
@@ -204,7 +235,7 @@
         
           本文作者 : Peizhi <br>
         
-        原文链接 : <a href="">http://learso.com/passages/hello-world/</a><br>
+        原文链接 : <a href="">http://learso.com/passages/利用Launchbar和Ulysses打造快捷资料搜集系统/</a><br>
         版权声明 : 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
         </blockquote>
       </div>
@@ -261,6 +292,27 @@
     <div class="article-meta pull-left">
       <span>
         
+          <i class="iconfont icon-06tags"></i>标签: 
+          
+          <span class="span--tag">
+            <a href="/tags/Launchbar/">
+              #Launchbar
+            </a>
+          </span>
+          
+          <span class="span--tag">
+            <a href="/tags/Ulysses/">
+              #Ulysses
+            </a>
+          </span>
+          
+          <span class="span--tag">
+            <a href="/tags/知识管理/">
+              #知识管理
+            </a>
+          </span>
+          
+        
       </span>
     </div>
     <div class="article-meta pull-right">
@@ -278,12 +330,12 @@
 
   <nav class="post-navigation">
     
-    
-      <div class="nav-next">
-        下一篇:
-        <a href="/passages/利用Launchbar和Ulysses打造快捷资料搜集系统/" target="_self">利用Launchbar和Ulysses打造快捷资料搜集系统</a>
-        <i class="iconfont icon-next"></i>
+      <div class="nav-pre">
+        <i class="iconfont icon-prev"></i>
+        上一篇:
+        <a href="/passages/hello-world/" target="_self">Hello World</a>
       </div>
+    
     
   </nav>
 
