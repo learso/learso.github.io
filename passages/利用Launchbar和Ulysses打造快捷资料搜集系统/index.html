@@ -191,7 +191,7 @@
 
   <div class="article-content">
     <div class="markdown-body">
-      <p>记得应该是在<a href="http://www.sspai.com" target="_blank" rel="noopener">少数派</a>上看到过一篇介绍如何以drafts为中心，打造ios系统的工作流程。瞬间就觉得这个工作流程正是我一直在寻找但又苦苦不能得的。后来按照这篇文章的思路，又结合自己的特殊需求修改，就形成了ios系统上以drafts为几乎所有的输入入口的一个流程。</p>
+      <h2 id="原始需求"><a href="#原始需求" class="headerlink" title="原始需求"></a>原始需求</h2><p>记得应该是在<a href="http://www.sspai.com" target="_blank" rel="noopener">少数派</a>上看到过一篇介绍如何以drafts为中心，打造ios系统的工作流程。瞬间就觉得这个工作流程正是我一直在寻找但又苦苦不能得的。后来按照这篇文章的思路，又结合自己的特殊需求修改，就形成了ios系统上以drafts为几乎所有的输入入口的一个流程。</p>
 <ul>
 <li>任务、待办等都通过drafts转2Do</li>
 <li>每日二句心灵鸡汤，通过drafts搜集资料，筛选后发微信群，再转印象笔记存档</li>
@@ -199,7 +199,7 @@
 <li>日记在drafts中写草稿，修改，然后转存DayOne</li>
 </ul>
 <p>至少到现在为止非常满意这套输入流程。但是每天工作的大部分时间用的生产工具是Mac OS，所以就想在Mac OS上有没有类似drafts的软件，可以让我完成同样的流程呢？</p>
-<p>由于mac的操作性比用手机要方便得多，各种软件都带有全局的快捷键，所以理论上不需要像ios上这样的一个软件转发的功能。仔细分析了自己的需求，发现资料的搜集和整理花去了我大部分的时间，而且很多操作不断重复：</p>
+<h2 id="我的需求"><a href="#我的需求" class="headerlink" title="我的需求"></a>我的需求</h2><p>由于mac的操作性比用手机要方便得多，各种软件都带有全局的快捷键，所以理论上不需要像ios上这样的一个软件转发的功能。仔细分析了自己的需求，发现资料的搜集和整理花去了我大部分的时间，而且很多操作不断重复：</p>
 <ol>
 <li>选取重要的段落、文字</li>
 <li>复制（Commander+c）</li>
@@ -212,7 +212,7 @@
 <li>在我的体系中，印象笔记是一个数据仓库，几乎不会在印象笔记中进行资料的加工。而从各渠道搜集过来的资料可能还需要进行筛选，剪枝，所以直接入到印象笔记不太合适。</li>
 <li>直接复制文章中的AppleScript似乎有语法问题，不能直接使用。</li>
 </ol>
-<p>因此，最终我使用了LauncherBar+Ulysses的组合，其他逻辑和原理和Bigice文章中一致。</p>
+<h2 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h2><p>因此，最终我使用了LauncherBar+Ulysses的组合，其他逻辑和原理和Bigice文章中一致。</p>
 <ol>
 <li>Launchbar中新建action， 使用什么名字随便，关键是default.py文件的脚本怎么写。我对Python相对更熟悉一点，所以就选用Python作为脚本语言。另外，现在Python3就已成熟，所以脚本头指定了<code>#!/usr/local/bin/python3</code>。与Ulysses的交互也利益于丰富的URL Scheme，可以点<a href="http://www.sohu.com/a/234645690_115785" target="_blank" rel="noopener">这里</a>看详细规则。</li>
 </ol>
@@ -223,7 +223,7 @@
 <p>想要使用这种方法，必须在Action中再新建一个脚本，我叫他hide.scpt，脚本的代码如下：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--自动隐藏当前窗口（Command+H）</span></span><br><span class="line"><span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">"System Events"</span></span><br><span class="line">	key code <span class="number">4</span> using &#123;command down&#125;</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">tell</span></span><br></pre></td></tr></table></figure></p>
 <p>在default.py中增加调用的hide.scpt的代码就可以了：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apple_script_name = <span class="string">"hide.scpt"</span></span><br><span class="line">my_command = [<span class="string">"osascript"</span>, apple_script_name]</span><br><span class="line">content = sp.check_output(my_command, env=my_env)</span><br></pre></td></tr></table></figure></p>
 <p>利息AppleScript可以调用键盘的功能，其实可以做很多事，至于如何搭配就看每个人的想象了。</p>
-<p>最后附上Mac键盘对应的key code的表供参考：</p>
+<h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p>最后附上Mac键盘对应的key code的表供参考：</p>
 <p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fyde8j2frqj31a40scdm9.jpg" alt="Mac 系统键盘key code对应关系"></p>
     </div>
   </div>
