@@ -8,12 +8,12 @@
   
   
   
-  <title>利用Launchbar和Ulysses打造快捷资料搜集系统 | Peizhi&#39;s Blog</title>
+  <title>输入相关的技巧两则 | Peizhi&#39;s Blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="工具使用,Launchbar,Ulysses,知识管理,">
+    <meta name="keywords" content="技巧出焉,输入输出,">
   
 
   <script>
@@ -165,24 +165,24 @@
 
 <div class="post">
   <h1 class="article-title">
-    <span>利用Launchbar和Ulysses打造快捷资料搜集系统</span>
+    <span>输入相关的技巧两则</span>
   </h1>
   <div class="article-top-meta">
     <span>
       发布 : 
-      2018-12-20
+      2018-12-21
     </span>
     
       <span>
         分类 : 
-          <a href="/categories/工具使用/">
-            工具使用
+          <a href="/categories/技巧出焉/">
+            技巧出焉
           </a>
       </span>
     
     
       <span>
-        浏览 : <span class="article-timer" data-identity="利用Launchbar和Ulysses打造快捷资料搜集系统"></span>
+        浏览 : <span class="article-timer" data-identity="输入相关的技巧两则"></span>
       </span>
     
   </div>
@@ -191,40 +191,37 @@
 
   <div class="article-content">
     <div class="markdown-body">
-      <h2 id="原始需求"><a href="#原始需求" class="headerlink" title="原始需求"></a>原始需求</h2><p>记得应该是在<a href="http://www.sspai.com" target="_blank" rel="noopener">少数派</a>上看到过一篇介绍如何以drafts为中心，打造ios系统的工作流程。瞬间就觉得这个工作流程正是我一直在寻找但又苦苦不能得的。后来按照这篇文章的思路，又结合自己的特殊需求修改，就形成了ios系统上以drafts为几乎所有的输入入口的一个流程。</p>
-<ul>
-<li>任务、待办等都通过drafts转2Do</li>
-<li>每日二句心灵鸡汤，通过drafts搜集资料，筛选后发微信群，再转印象笔记存档</li>
-<li>灵感、读书感悟直接写在drafts中，然后存档，以后需要深入思考时再转印象笔记或Ulysses</li>
-<li>日记在drafts中写草稿，修改，然后转存DayOne</li>
-</ul>
-<p>至少到现在为止非常满意这套输入流程。但是每天工作的大部分时间用的生产工具是Mac OS，所以就想在Mac OS上有没有类似drafts的软件，可以让我完成同样的流程呢？</p>
-<h2 id="我的需求"><a href="#我的需求" class="headerlink" title="我的需求"></a>我的需求</h2><p>由于mac的操作性比用手机要方便得多，各种软件都带有全局的快捷键，所以理论上不需要像ios上这样的一个软件转发的功能。仔细分析了自己的需求，发现资料的搜集和整理花去了我大部分的时间，而且很多操作不断重复：</p>
+      <h2 id="一、带Touch-Bar的Mac点击ESC键"><a href="#一、带Touch-Bar的Mac点击ESC键" class="headerlink" title="一、带Touch Bar的Mac点击ESC键"></a>一、带Touch Bar的Mac点击ESC键</h2><p>带Touch Bar的Mac看起来非常的高大上，虽然这段时间用下来，还没有充分开发出Touch Bar的用处。但是对于好多Vi案来说最大的灾难是ESC键。</p>
+<p>习惯用Vi的人来说，ESC键绝对是使用频率最高的一个键。而且当你熟练了以后，ESC键不仅是一个特殊的功能键，而且是整个输入过程的一个节奏控制器。每次输入完一长段，我都习惯<code>ESC</code>，然后<code>:w</code>，或者需要修改之前的输入文字时就会<code>ESC</code>然后一直按<code>b</code>定位到需要修改处。甚至到后来我都养成了一个习惯，如果暂时不输入文字，都会先<code>ESC</code>，这样可以防止误触到键盘而打乱已经整理好的文字。如果再配上机械键盘那清脆的按键声音，每次按ESC键就是一种享受。</p>
+<p>然而，因为有了Touch Bar，这种体验就没有了。苹果把ESC键入到了Touch Bar上，成为了一个虚拟按键，从此之后再无手感可言，也再无快感可言。直到我碰到了一个软件——Karabiner-Elements。</p>
+<p><a href="https://pqrs.org/osx/karabiner/" target="_blank" rel="noopener">Karabiner-Elements</a>是一个免费的改键软件。只需要把某个实体键映射成ESC键，就可以恢复到ESC键实体键的手感了。找便全部键盘，觉得大小写切换键（caps_lock)使用的时间不多，所以就用这个键映射成ESC：</p>
+<p><img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fyebkegrztj31j00u0qbg.jpg" alt="屏幕快照 2018-12-21 上午10.54.34"></p>
+<p>当然这个做法并不完美，因为ESC习惯的使用者还是习惯用左手小指到键盘的角落里去寻找ESC键，但是聊胜于无。</p>
+<h2 id="二、如何方便地输入「」"><a href="#二、如何方便地输入「」" class="headerlink" title="二、如何方便地输入「」"></a>二、如何方便地输入「」</h2><p>「」似乎是繁体中文中的引号，以前在大陆用得不多，后来可能是由于在排版上比“”好看，所以网络文章中看到得越来越多。想要在自己的文章中使用「」，但是我发现并不容易。</p>
+<p>首先，键盘上并没有直接输入「和」的键，需要当作特殊符号来输。其实，网上搜了一下更快捷的输入方法，发现大多不可用。</p>
+<p>所以这里总结两种输入「」的方法供参考：</p>
 <ol>
-<li>选取重要的段落、文字</li>
-<li>复制（Commander+c）</li>
-<li>切换到印象笔记（或者Ulysses）</li>
-<li>找到搜集资料统一入口文章</li>
-<li>粘贴（Commander+v）</li>
+<li>使用「文本替换」功能。</li>
 </ol>
-<p>作者Bigice 在<a href="https://sspai.com/post/43323" target="_blank" rel="noopener">《用 Drafts + LaunchBar + Evernote 打造 Daily Record 系统 》</a>这篇文章提供了很好的解决方案，就是LaunchBar+印象笔记的方案。但是两个原因让我没有完成应用文章中提供的脚本和方法，而是把资料搜集的入口放到了Ulyssess中：</p>
-<ol>
-<li>在我的体系中，印象笔记是一个数据仓库，几乎不会在印象笔记中进行资料的加工。而从各渠道搜集过来的资料可能还需要进行筛选，剪枝，所以直接入到印象笔记不太合适。</li>
-<li>直接复制文章中的AppleScript似乎有语法问题，不能直接使用。</li>
-</ol>
-<h2 id="实现方法"><a href="#实现方法" class="headerlink" title="实现方法"></a>实现方法</h2><p>因此，最终我使用了LauncherBar+Ulysses的组合，其他逻辑和原理和Bigice文章中一致。</p>
-<ol>
-<li>Launchbar中新建action， 使用什么名字随便，关键是default.py文件的脚本怎么写。我对Python相对更熟悉一点，所以就选用Python作为脚本语言。另外，现在Python3就已成熟，所以脚本头指定了<code>#!/usr/local/bin/python3</code>。与Ulysses的交互也利益于丰富的URL Scheme，可以点<a href="http://www.sohu.com/a/234645690_115785" target="_blank" rel="noopener">这里</a>看详细规则。</li>
-</ol>
-<p>default.py的源码如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/local/bin/python3</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># 把选Instant Send的内容发住Ulysses，并自动隐藏Ulysses</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line"><span class="keyword">import</span> subprocess <span class="keyword">as</span> sp</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">my_env = os.environ.copy()</span><br><span class="line">my_env[<span class="string">"PATH"</span>] = <span class="string">"/usr/local/bin:"</span> + my_env[<span class="string">"PATH"</span>]</span><br><span class="line"></span><br><span class="line">now = int(time.time()) </span><br><span class="line">timeStruct = time.localtime(now) </span><br><span class="line">strTime = time.strftime(<span class="string">"%Y-%m-%d %H:%M:%S"</span>, timeStruct) </span><br><span class="line"></span><br><span class="line">text = <span class="string">"- "</span>+sys.argv[<span class="number">1</span>]+<span class="string">"   &lt;*"</span>+strTime+<span class="string">"*&gt;"</span></span><br><span class="line">text = text.replace(<span class="string">'ulysses://'</span>,<span class="string">'ulysses%3A%2F%2F'</span>)</span><br><span class="line">url_scheme = <span class="string">"ulysses://x-callback-url/insert?id=[[ariticle_id]]&amp;newline=prepend&amp;text="</span>+text</span><br><span class="line"></span><br><span class="line">my_command = [<span class="string">"open"</span>, url_scheme]</span><br><span class="line">content = sp.check_output(my_command, env=my_env)</span><br><span class="line"></span><br><span class="line">apple_script_name = <span class="string">"hide.scpt"</span></span><br><span class="line">my_command = [<span class="string">"osascript"</span>, apple_script_name]</span><br><span class="line">content = sp.check_output(my_command, env=my_env)</span><br></pre></td></tr></table></figure></p>
+<p>Mac上的输入法中有一个「文本替换」功能，我把fyh自动替换成「」就可以了：</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fyebk9p95pj310y0tetf8.jpg" alt="屏幕快照 2018-12-21 上午11.06.49"></p>
 <ol start="2">
-<li>脚本用得比较顺手，但使用过程中有一点比较不爽的是每次LaunchBar胡Instant Send把内容粘贴进Ulysses后，就会停留在Ulysses的界面，还得自己手动切换回到之前浏览的界面，并且于是想了好多办法都没法解决这个问题。比如一开始想通过URL Scheme的x-success参数回到原应用，但是没有办法知道之前使用的到底是什么应用。最终的解决办法还是AppleS。在调用完Ulysess的Url Scheme后再调用一段AppleScript，这段脚本的作用是按快捷键Commant+H（隐藏当前窗口）。</li>
+<li>使用第三方输入法。</li>
 </ol>
-<p>想要使用这种方法，必须在Action中再新建一个脚本，我叫他hide.scpt，脚本的代码如下：<br><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">--自动隐藏当前窗口（Command+H）</span></span><br><span class="line"><span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">"System Events"</span></span><br><span class="line">	key code <span class="number">4</span> using &#123;command down&#125;</span><br><span class="line"><span class="keyword">end</span> <span class="keyword">tell</span></span><br></pre></td></tr></table></figure></p>
-<p>在default.py中增加调用的hide.scpt的代码就可以了：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">apple_script_name = <span class="string">"hide.scpt"</span></span><br><span class="line">my_command = [<span class="string">"osascript"</span>, apple_script_name]</span><br><span class="line">content = sp.check_output(my_command, env=my_env)</span><br></pre></td></tr></table></figure></p>
-<p>利息AppleScript可以调用键盘的功能，其实可以做很多事，至于如何搭配就看每个人的想象了。</p>
-<h2 id="附件"><a href="#附件" class="headerlink" title="附件"></a>附件</h2><p>最后附上Mac键盘对应的key code的表供参考：</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fyde8j2frqj31a40scdm9.jpg" alt="Mac 系统键盘key code对应关系"></p>
+<p>很多第三方输入法都是非常接地气的，好多都提供了方便输入「」的功能：</p>
+<ul>
+<li><p>使用百度输入法–>设置： 中文时，使用”输入直角引号「」『』（Mac下）</p>
+</li>
+<li><p>搜狗输入法在高级设置选项里可以自定义标点，在选项里把标点的那些按键替换成其他的符号，比如把[]替换成「」就可以了</p>
+</li>
+<li><p>QQ输入法直接看下图：</p>
+</li>
+</ul>
+<p><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fyebk6791ej30bx05taaa.jpg" alt="7fb5d0d3gw1edhkvnzf2ij20bx05taaa"></p>
+<ul>
+<li>落格输入法可以使用点划引导也很方便，我按下图的方法设置后，以后只需要输入<code>;l</code>就会出现「」：</li>
+</ul>
+<p><img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fyebjzi8bmj30p60ta0wk.jpg" alt="屏幕快照 2018-12-21 上午11.12.12"></p>
     </div>
   </div>
   
@@ -235,7 +232,7 @@
         
           本文作者 : Peizhi <br>
         
-        原文链接 : <a href="">http://learso.com/passages/利用Launchbar和Ulysses打造快捷资料搜集系统/</a><br>
+        原文链接 : <a href="">http://learso.com/passages/输入相关的技巧两则/</a><br>
         版权声明 : 本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明出处！
         </blockquote>
       </div>
@@ -295,20 +292,8 @@
           <i class="iconfont icon-06tags"></i>标签: 
           
           <span class="span--tag">
-            <a href="/tags/Launchbar/">
-              #Launchbar
-            </a>
-          </span>
-          
-          <span class="span--tag">
-            <a href="/tags/Ulysses/">
-              #Ulysses
-            </a>
-          </span>
-          
-          <span class="span--tag">
-            <a href="/tags/知识管理/">
-              #知识管理
+            <a href="/tags/输入输出/">
+              #输入输出
             </a>
           </span>
           
@@ -333,15 +318,9 @@
       <div class="nav-pre">
         <i class="iconfont icon-prev"></i>
         上一篇:
-        <a href="/passages/hello-world/" target="_self">Hello World</a>
+        <a href="/passages/利用Launchbar和Ulysses打造快捷资料搜集系统/" target="_self">利用Launchbar和Ulysses打造快捷资料搜集系统</a>
       </div>
     
-    
-      <div class="nav-next">
-        下一篇:
-        <a href="/passages/输入相关的技巧两则/" target="_self">输入相关的技巧两则</a>
-        <i class="iconfont icon-next"></i>
-      </div>
     
   </nav>
 
