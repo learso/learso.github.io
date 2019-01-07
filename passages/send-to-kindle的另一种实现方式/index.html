@@ -191,12 +191,12 @@
 
   <div class="article-content">
     <div class="markdown-body">
-      <h1 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h1><p>最近碰到了这样一种应用场景：</p>
+      <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>最近碰到了这样一种应用场景：</p>
 <blockquote>
 <p>首先，当浏览网页时看到好的内容，想把整个页面内容推送到kindle，之后在Kindle上阅读；其次，我在阅读doc或其他文档时，发现有一些好的段落，于是想把它们推送到kindle稍后阅读；最后，也是最重要的一点就是以上两种场景我想用同一种操作方式来推推送。</p>
 </blockquote>
 <p>对于以上的场景，我没有看到过有适当的解决方案，可能是这种需求比较<em>变态</em>吧。由于最近用Launchbar越来越顺手，什么操作都想用它来完成（Instant Sent真的是太方便了），并且Launchbar确实扩展性非常强大，所以打算自己打造一个Action来解决这个需求。</p>
-<h1 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h1><h2 id="KindeEar"><a href="#KindeEar" class="headerlink" title="KindeEar"></a>KindeEar</h2><p>如果没有KindleEar的出现，我也暂时没有好的方式来实现，但是上周搭建完KindleEar后，查阅他的FAQ时发现居然还有如此逆天的隐藏功能：</p>
+<h2 id="解决思路"><a href="#解决思路" class="headerlink" title="解决思路"></a>解决思路</h2><h3 id="KindleEar"><a href="#KindleEar" class="headerlink" title="KindleEar"></a>KindleEar</h3><p>如果没有KindleEar的出现，我也暂时没有好的方式来实现，但是上周搭建完KindleEar后，查阅他的FAQ时发现居然还有如此逆天的隐藏功能：</p>
 <p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fyy1cb5l3rj316v0u04ao.jpg" alt="屏幕快照 2019-01-07 下午2.34.15"></p>
 <p>这个功能意味着我可以把KindleEar当作一个引擎，这个引擎有两个核心功能：</p>
 <ol>
@@ -205,13 +205,13 @@
 </ol>
 <p>有了这两个功能，我要做的仅仅是解决Launchbar前端调用邮件的功能。</p>
 <p>KindleEar服务的搭建推荐一篇文章<a href="https://bookfere.com/post/19.html" target="_blank" rel="noopener">《KindleEar 搭建教程：推送 RSS 订阅到 Kindle》</a>，文章对于零基础的搭建已经讲得很详细，之后我会写一些KindeEar相关的高级应用的文章（其实本文就可以算是KindeEar的高级应用）。</p>
-<h1 id="AppleScript"><a href="#AppleScript" class="headerlink" title="AppleScript"></a>AppleScript</h1><p>Launchbar上利用强大的Action来实现自动提取网页标题，自动填写收件人地址，自动填写邮件主题和内容等功能。其实我第一想到的不是用AppleScript来实现，因为在上一篇文章中我成功通过Python实现了<a href="https://learso.com/passages/利用Launchbar和Ulysses打造快捷资料搜集系统/">利用Launchbar和Ulysses打造快捷资料搜集系统</a>，所以本来也很想用Python来实现。但是有两个原因让我最终放弃了Python：</p>
+<h2 id="AppleScript"><a href="#AppleScript" class="headerlink" title="AppleScript"></a>AppleScript</h2><p>Launchbar上利用强大的Action来实现自动提取网页标题，自动填写收件人地址，自动填写邮件主题和内容等功能。其实我第一想到的不是用AppleScript来实现，因为在上一篇文章中我成功通过Python实现了<a href="https://learso.com/passages/利用Launchbar和Ulysses打造快捷资料搜集系统/">利用Launchbar和Ulysses打造快捷资料搜集系统</a>，所以本来也很想用Python来实现。但是有两个原因让我最终放弃了Python：</p>
 <ol>
 <li>利用Python发邮件，需要配置第三方SMTP服务器的信息，不是太安全；</li>
 <li>Python发邮件是全后台进行的，我没法对邮件内容进行修改，也没法知道邮件发送状态。</li>
 </ol>
 <p>所以最后觉得用AppleScript调用系统的Mail程序比较合适，额外还有一个好处是所有推送过的邮件都在发件箱里保存着。</p>
-<h1 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h1><ol>
+<h2 id="实现过程"><a href="#实现过程" class="headerlink" title="实现过程"></a>实现过程</h2><ol>
 <li><p>建立一个新的Action，名字，icon等按照自己的喜欢随便写，只是需要注意在scripts中选择<strong>AppleScript</strong>；</p>
 <p><img src="https://ws1.sinaimg.cn/large/006tNc79gy1fyy1cfiypdj30vk0seq7v.jpg" alt="屏幕快照 2019-01-07 下午2.58.17"></p>
 </li>
@@ -220,11 +220,11 @@
 </ol>
 <figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">-- LaunchBar Action Script</span></span><br><span class="line"><span class="keyword">on</span> handle_string(content)</span><br><span class="line">	<span class="keyword">set</span> theSubject <span class="keyword">to</span> <span class="string">""</span></span><br><span class="line">	<span class="keyword">set</span> theBody <span class="keyword">to</span> content</span><br><span class="line">	<span class="keyword">set</span> theAddress <span class="keyword">to</span> <span class="string">"kindle@appid.appspotmail.com"</span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">"Safari"</span></span><br><span class="line">		<span class="keyword">set</span> theSubject <span class="keyword">to</span> <span class="built_in">name</span> <span class="keyword">of</span> <span class="keyword">front</span> document</span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">tell</span></span><br><span class="line">	</span><br><span class="line">	<span class="keyword">tell</span> <span class="built_in">application</span> <span class="string">"Mail"</span></span><br><span class="line">		<span class="keyword">set</span> theNewMessage <span class="keyword">to</span> make new outgoing message <span class="keyword">with</span> properties &#123;subject:theSubject, content:theBody &amp; <span class="literal">return</span> &amp; <span class="literal">return</span>, visible:<span class="literal">true</span>&#125;</span><br><span class="line">		<span class="keyword">tell</span> theNewMessage</span><br><span class="line">			<span class="keyword">set</span> visibile <span class="keyword">to</span> <span class="literal">true</span></span><br><span class="line">			make new <span class="keyword">to</span> recipient <span class="keyword">at</span> <span class="keyword">end</span> <span class="keyword">of</span> <span class="keyword">to</span> recipients <span class="keyword">with</span> properties &#123;address:theAddress&#125;</span><br><span class="line">		<span class="keyword">end</span> <span class="keyword">tell</span></span><br><span class="line">		<span class="built_in">activate</span></span><br><span class="line">	<span class="keyword">end</span> <span class="keyword">tell</span></span><br><span class="line"><span class="keyword">end</span> handle_string</span><br></pre></td></tr></table></figure>
 <p>把以上代码<code>set theAddress to &quot;kindle@appid.appspotmail.com&quot;</code>中的<code>appid</code>替换成你自己KindleEar的appi就行。</p>
-<h1 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h1><ul>
+<h2 id="实际操作"><a href="#实际操作" class="headerlink" title="实际操作"></a>实际操作</h2><ul>
 <li>如果想把浏览的网页推送到kindle阅读，只需要选择URL，然后Instant Send到Launchbar，选择“send To Kindle”；</li>
 <li>如果想把doc等文档内容推送到kindle，则可以选择文本段落，然后Instant Send到Launchbar，选择“send To Kindle”；</li>
 </ul>
-<h1 id="待改进"><a href="#待改进" class="headerlink" title="待改进"></a>待改进</h1><p>这套方案还不是集大成者，可以有很多改进的地方，比如：</p>
+<h2 id="待改进"><a href="#待改进" class="headerlink" title="待改进"></a>待改进</h2><p>这套方案还不是集大成者，可以有很多改进的地方，比如：</p>
 <ul>
 <li>没有办法推送富文本内容；</li>
 <li>没有办法直接推送txt，doc，mobi等文件；</li>
